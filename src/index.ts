@@ -1,0 +1,1 @@
+export { htmlDiff } from './htmlDiff';

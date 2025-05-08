@@ -1,0 +1,14 @@
+*.log
+npm-debug.log*
+
+node_modules
+
+.vscode
+
+test
+.gitignore
+LICENSE
+package-lock.json
+tsconfig.json
+tsup.config.ts
+vitest.config.ts

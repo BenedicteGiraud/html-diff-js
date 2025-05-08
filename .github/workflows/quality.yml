@@ -1,0 +1,43 @@
+name: 🎯 Check code quality
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: read
+  pull-requests: read
+
+concurrency:
+  group: html-diff-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: 🦄 Lint and Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🧾 Checkout
+        uses: actions/checkout@v4
+
+      - name: 🛠️ Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: './.nvmrc'
+
+      - name: 📦 Install node_modules
+        shell: bash
+        run: npm ci
+
+      - name: 🔎 Run prettier
+        run: npm run format:check
+
+      - name: 🔎 Run eslint
+        shell: bash
+        run: npm run lint
