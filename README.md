@@ -1,13 +1,13 @@
 # html-diff
 
-A lightweight JavaScript library to highlight changes between two HTML strings. It wraps inserted content with <ins> tags and deleted content with <del> tags, making it ideal for visualizing diffs in rich text content.
+A lightweight JavaScript library to highlight changes between two HTML strings. It wraps inserted content with `<ins>` tags and deleted content with `<del>` tags, making it ideal for visualizing diffs in rich text content.
 
 ---
 
 ## 🚀 Features
 
 - 🔍 Detects and highlights changes between two HTML strings
-- 🧩 Wraps insertions in <ins> and deletions in <del>
+- 🧩 Wraps insertions in `<ins>` and deletions in `<del>`
 - ⚡ No external dependencies
 - ✅ Works in both browser and Node.js environments
 
