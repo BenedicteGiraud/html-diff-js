@@ -11,6 +11,10 @@ A lightweight JavaScript library to highlight changes between two HTML strings. 
 - ⚡ No external dependencies
 - ✅ Works in both browser and Node.js environments
 
+## 🌐 Demo
+
+You can see a live demo of html-diff in action here: [Demo](https://benedictegiraud.github.io/html-diff-js/)
+
 ## 📦 Installation
 
 Install via npm:
@@ -38,10 +42,10 @@ Returns the resulting HTML string with:
 ## 💡 Examples
 
 ```ts
-import { htmlDiff } from "@benedicte/html-diff";
+import { htmlDiff } from '@benedicte/html-diff';
 
-const before = "<p>Hello world!</p>";
-const after = "<p>Hello brave new world</p>";
+const before = '<p>Hello world!</p>';
+const after = '<p>Hello brave new world</p>';
 const result = htmlDiff(before, after);
 
 console.log(result);
